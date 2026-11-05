@@ -43,15 +43,23 @@ The application provides an administrator dashboard for uploading PDF documents,
 
 Watch the PDF Management System in action.
 
-<!-- Replace YOUR_YOUTUBE_VIDEO_ID with the ID of your actual YouTube demonstration video. -->
+
+<!-- PDF Management System - YouTube Demonstration -->
 
 <p align="center">
-  <a href="[![https://www.youtube.com/watch?v=YOUR_YOUTUBE_VIDEO_ID](http://youtube.com/watch?v=AFHfNY2iu2I)]">
-    <img src="(https://www.youtube.com/watch?v=AFHfNY2iu2I)"
-         alt="Watch PDF Management System demonstration"
-         width="800">
+  <a href="https://www.youtube.com/watch?v=AFHfNY2iu2I" target="_blank">
+    <img
+      src="https://img.youtube.com/vi/AFHfNY2iu2I/maxresdefault.jpg"
+      alt="Watch the PDF Management System demonstration"
+      width="800"
+    />
   </a>
 </p>
+
+<p align="center">
+  <strong>▶ Watch the PDF Management System Demonstration</strong>
+</p>
+
 
 <p align="center">
   <strong>
