@@ -40,23 +40,38 @@ The application provides an administrator dashboard for uploading PDF documents,
 ---
 
 
+
 ## Project Demonstration
 
-Explore the **PDF Management System** through the video demonstration below. The video walks through the application's interface, PDF processing capabilities, and key management features.
+Explore the **PDF Management System** through our official interactive project demonstration.
+
+The demonstration showcases the application's interface, PDF processing capabilities, intelligent compression engine, and document management features.
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=AFHfNY2iu2I" target="_blank">
+  <a href="https://eric428-a.github.io/PDF-Management-System/demo.html">
     <img
       src="https://img.youtube.com/vi/AFHfNY2iu2I/0.jpg"
-      alt="PDF Management System - Video Demonstration"
+      alt="PDF Management System - Official Video Demonstration"
       width="850"
     />
   </a>
 </p>
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=AFHfNY2iu2I" target="_blank">
-    <strong>▶ WATCH THE FULL PROJECT DEMONSTRATION ON YOUTUBE</strong>
+  <strong>
+    <a href="https://eric428-a.github.io/PDF-Management-System/demo.html">
+      ▶ WATCH THE FULL PROJECT DEMONSTRATION
+    </a>
+  </strong>
+</p>
+
+<p align="center">
+  <a href="https://eric428-a.github.io/PDF-Management-System/demo.html">
+    View Interactive Demonstration Page
+  </a>
+  |
+  <a href="https://www.youtube.com/watch?v=AFHfNY2iu2I">
+    Watch Directly on YouTube
   </a>
 </p>
 
@@ -64,16 +79,24 @@ Explore the **PDF Management System** through the video demonstration below. The
 
 | Feature | Demonstration |
 |---|---|
-| Administrator Authentication | Secure login |
-| Dashboard | Overview of application statistics |
+| Administrator Authentication | Secure administrator login |
+| Dashboard Overview | Application statistics and performance indicators |
 | PDF Upload | Selecting and uploading PDF documents |
-| PDF Inspection | Examining document properties |
-| PDF Compression | Processing PDFs toward a target size |
-| Compression Results | Reviewing file sizes and compression outcomes |
+| PDF Inspection | Examining PDF document properties |
+| Intelligent PDF Compression | Reducing PDF file sizes toward a configurable target |
+| Compression Results | Reviewing original and compressed file sizes |
 | File Downloads | Downloading original and compressed documents |
-| Processing History | Reviewing previously processed documents |
+| Processing History | Reviewing previously processed PDF documents |
+
+### Interactive Demonstration
+
+The dedicated demonstration page is hosted using **GitHub Pages**, allowing visitors to watch the embedded YouTube video without requiring deployment of the FastAPI backend or MongoDB database.
+
+**Live Demonstration:**  
+https://eric428-a.github.io/PDF-Management-System/demo.html
 
 ---
+
 
 ## Application Screenshots
 
