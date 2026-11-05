@@ -39,48 +39,39 @@ The application provides an administrator dashboard for uploading PDF documents,
 
 ---
 
+
 ## Project Demonstration
 
-Watch the PDF Management System in action.
-
-
-<!-- PDF Management System - YouTube Demonstration -->
+Explore the **PDF Management System** through the video demonstration below. The video walks through the application's interface, PDF processing capabilities, and key management features.
 
 <p align="center">
   <a href="https://www.youtube.com/watch?v=AFHfNY2iu2I" target="_blank">
     <img
-      src="https://img.youtube.com/vi/AFHfNY2iu2I/maxresdefault.jpg"
-      alt="Watch the PDF Management System demonstration"
-      width="800"
+      src="https://img.youtube.com/vi/AFHfNY2iu2I/0.jpg"
+      alt="PDF Management System - Video Demonstration"
+      width="850"
     />
   </a>
 </p>
 
 <p align="center">
-  <strong>▶ Watch the PDF Management System Demonstration</strong>
+  <a href="https://www.youtube.com/watch?v=AFHfNY2iu2I" target="_blank">
+    <strong>▶ WATCH THE FULL PROJECT DEMONSTRATION ON YOUTUBE</strong>
+  </a>
 </p>
 
+### What the Demonstration Covers
 
-<p align="center">
-  <strong>
-    <a href="https://www.youtube.com/watch?v=YOUR_YOUTUBE_VIDEO_ID">
-      Watch the Project Demonstration on YouTube
-    </a>
-  </strong>
-</p>
-
-> GitHub README files do not normally support an embedded YouTube player. The thumbnail above provides a clickable link to the video.
-
-**Video coverage:**
-
-- Administrator login.
-- Dashboard overview.
-- PDF uploading.
-- PDF inspection.
-- PDF compression.
-- Compression results.
-- Downloading processed documents.
-- Processing history.
+| Feature | Demonstration |
+|---|---|
+| Administrator Authentication | Secure login |
+| Dashboard | Overview of application statistics |
+| PDF Upload | Selecting and uploading PDF documents |
+| PDF Inspection | Examining document properties |
+| PDF Compression | Processing PDFs toward a target size |
+| Compression Results | Reviewing file sizes and compression outcomes |
+| File Downloads | Downloading original and compressed documents |
+| Processing History | Reviewing previously processed documents |
 
 ---
 
