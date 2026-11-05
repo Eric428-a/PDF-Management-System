@@ -1,0 +1,529 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#0f172a">
+    <meta name="description" content="Manage, inspect and compress your PDF documents securely.">
+
+    <title>Dashboard | PDF Management System</title>
+
+    <!-- Application favicon -->
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg?v=1">
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body class="dashboard-body">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+            <div class="brand-icon small">PDF</div>
+
+            <div class="brand-details">
+                <h2>PDF Manager</h2>
+                <span>Document workspace</span>
+            </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <div class="sidebar-section-label">WORKSPACE</div>
+
+        <nav class="sidebar-nav">
+
+            <a href="/dashboard" class="nav-link active">
+                <span class="nav-icon">▦</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#uploadSection" class="nav-link">
+                <span class="nav-icon">↑</span>
+                <span>Upload PDF</span>
+            </a>
+
+            <a href="#historySection" class="nav-link">
+                <span class="nav-icon">◷</span>
+                <span>Processing History</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-status">
+                <span class="status-dot"></span>
+
+                <div>
+                    <strong>System available</strong>
+                    <small>PDF services operational</small>
+                </div>
+            </div>
+
+            <div class="sidebar-divider"></div>
+
+            <button
+                type="button"
+                id="logoutButton"
+                class="logout-button"
+                title="Sign out of your account"
+            >
+                <span class="logout-icon">↪</span>
+                <span>Sign Out</span>
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div class="topbar-heading">
+                <span class="eyebrow">WORKSPACE OVERVIEW</span>
+
+                <h1>Dashboard</h1>
+
+                <p>
+                    Welcome to your PDF workspace.
+                    Manage, inspect and optimize your documents.
+                </p>
+            </div>
+
+            <div class="topbar-actions">
+
+                <div class="user-profile">
+
+                    <div class="user-avatar">A</div>
+
+                    <div class="user-details">
+                        <strong id="usernameDisplay">Administrator</strong>
+                        <span>Administrator</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= STATISTICS ================= -->
+
+        <section class="stats-grid">
+
+            <article class="stat-card">
+
+                <div class="stat-card-top">
+                    <div class="stat-icon blue">▤</div>
+                    <span class="stat-label">DOCUMENTS</span>
+                </div>
+
+                <span class="stat-title">Total PDFs</span>
+
+                <h2 id="totalFiles">0</h2>
+
+                <small>Uploaded documents</small>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <div class="stat-card-top">
+                    <div class="stat-icon green">✓</div>
+                    <span class="stat-label">PROCESSING</span>
+                </div>
+
+                <span class="stat-title">Compressed PDFs</span>
+
+                <h2 id="compressedFiles">0</h2>
+
+                <small>Successfully processed</small>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <div class="stat-card-top">
+                    <div class="stat-icon purple">◎</div>
+                    <span class="stat-label">PERFORMANCE</span>
+                </div>
+
+                <span class="stat-title">Target Achieved</span>
+
+                <h2 id="targetMet">0</h2>
+
+                <small>At or below target size</small>
+
+            </article>
+
+
+            <article class="stat-card">
+
+                <div class="stat-card-top">
+                    <div class="stat-icon orange">↓</div>
+                    <span class="stat-label">OPTIMIZATION</span>
+                </div>
+
+                <span class="stat-title">Space Saved</span>
+
+                <h2 id="savedMB">0 MB</h2>
+
+                <small>Total storage reduction</small>
+
+            </article>
+
+        </section>
+
+
+        <!-- ================= UPLOAD SECTION ================= -->
+
+        <section id="uploadSection" class="panel upload-panel">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="eyebrow">DOCUMENT PROCESSING</span>
+
+                    <h2>Upload a PDF</h2>
+
+                    <p>
+                        Select a PDF document to inspect its structure
+                        and prepare it for compression.
+                    </p>
+                </div>
+
+                <span class="limit-label">
+                    <span class="limit-icon">✓</span>
+                    Maximum file size: 50 MB
+                </span>
+
+            </div>
+
+
+            <form id="uploadForm">
+
+                <label for="pdfFile" class="upload-area">
+
+                    <div class="upload-icon">↑</div>
+
+                    <h3>Select your PDF document</h3>
+
+                    <p>
+                        Drag and drop is available when supported,
+                        or browse your computer.
+                    </p>
+
+                    <span class="upload-browse">
+                        Browse files
+                    </span>
+
+                    <span id="selectedFileName" class="selected-file">
+                        No file selected
+                    </span>
+
+                </label>
+
+
+                <input
+                    type="file"
+                    id="pdfFile"
+                    accept=".pdf,application/pdf"
+                    hidden
+                    required
+                >
+
+
+                <div class="upload-actions">
+
+                    <div class="target-control">
+
+                        <label for="targetKB">
+                            Compression target
+                        </label>
+
+                        <div class="target-input">
+
+                            <input
+                                type="number"
+                                id="targetKB"
+                                value="500"
+                                min="50"
+                                max="10000"
+                                required
+                            >
+
+                            <span>KB</span>
+
+                        </div>
+
+                        <small>Desired maximum output size</small>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        id="uploadButton"
+                        class="primary-button"
+                    >
+                        <span>↑</span>
+                        Upload and Inspect PDF
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <div id="uploadMessage" class="message"></div>
+
+        </section>
+
+
+        <!-- ================= INSPECTION SECTION ================= -->
+
+        <section id="inspectionSection" class="panel hidden">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="eyebrow">DOCUMENT ANALYSIS</span>
+
+                    <h2>PDF Inspection Results</h2>
+
+                    <p id="inspectionFilename"></p>
+                </div>
+
+                <span class="status-pill success">
+                    <span>✓</span>
+                    Inspection complete
+                </span>
+
+            </div>
+
+
+            <div class="inspection-grid">
+
+                <div class="inspection-item">
+                    <span>Original size</span>
+                    <strong id="inspectionSize">-</strong>
+                </div>
+
+                <div class="inspection-item">
+                    <span>Total pages</span>
+                    <strong id="inspectionPages">-</strong>
+                </div>
+
+                <div class="inspection-item">
+                    <span>Embedded images</span>
+                    <strong id="inspectionImages">-</strong>
+                </div>
+
+                <div class="inspection-item">
+                    <span>Selectable text</span>
+                    <strong id="inspectionText">-</strong>
+                </div>
+
+            </div>
+
+
+            <div class="page-details">
+
+                <h3>Page dimensions</h3>
+
+                <div id="pageDimensions"></div>
+
+            </div>
+
+
+            <div class="compression-action">
+
+                <div>
+                    <strong>Ready to compress?</strong>
+
+                    <p>
+                        Your original PDF will remain unchanged.
+                    </p>
+                </div>
+
+                <button
+                    type="button"
+                    id="compressButton"
+                    class="primary-button"
+                >
+                    Compress PDF
+                    <span>→</span>
+                </button>
+
+            </div>
+
+
+            <div id="compressionMessage" class="message"></div>
+
+
+            <!-- COMPRESSION RESULTS -->
+
+            <div id="compressionResults" class="hidden">
+
+                <div class="result-heading">
+
+                    <div>
+                        <span class="eyebrow">PROCESSING SUMMARY</span>
+                        <h3>Compression Results</h3>
+                    </div>
+
+                    <span id="compressionStatus" class="status-pill"></span>
+
+                </div>
+
+
+                <div class="inspection-grid">
+
+                    <div class="inspection-item">
+                        <span>Original size</span>
+                        <strong id="resultOriginal">-</strong>
+                    </div>
+
+                    <div class="inspection-item">
+                        <span>Compressed size</span>
+                        <strong id="resultCompressed">-</strong>
+                    </div>
+
+                    <div class="inspection-item">
+                        <span>Reduction</span>
+                        <strong id="resultReduction">-</strong>
+                    </div>
+
+                    <div class="inspection-item">
+                        <span>Pages verified</span>
+                        <strong id="resultPages">-</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="download-actions">
+
+                    <button
+                        type="button"
+                        id="downloadOriginal"
+                        class="secondary-button"
+                    >
+                        <span>↓</span>
+                        Download Original
+                    </button>
+
+                    <button
+                        type="button"
+                        id="downloadCompressed"
+                        class="primary-button"
+                    >
+                        <span>↓</span>
+                        Download Compressed PDF
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROCESSING HISTORY ================= -->
+
+        <section id="historySection" class="panel history-panel">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="eyebrow">DOCUMENT RECORDS</span>
+
+                    <h2>Processing History</h2>
+
+                    <p>
+                        View your uploaded documents and compression results.
+                    </p>
+                </div>
+
+                <button
+                    type="button"
+                    id="refreshButton"
+                    class="secondary-button small-button"
+                >
+                    <span>↻</span>
+                    Refresh
+                </button>
+
+            </div>
+
+
+            <div class="table-wrapper">
+
+                <table class="history-table">
+
+                    <thead>
+                        <tr>
+                            <th>Document</th>
+                            <th>Original Size</th>
+                            <th>Pages</th>
+                            <th>Status</th>
+                            <th>Compressed Size</th>
+                            <th>Reduction</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+
+                    <tbody id="historyTableBody">
+
+                        <tr>
+                            <td colspan="7" class="empty-state">
+                                Loading processing history...
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer class="dashboard-footer">
+
+            <span>PDF Management System</span>
+
+            <span class="footer-separator">•</span>
+
+            <span>Document processing workspace</span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="/static/js/dashboard.js"></script>
+
+</body>
+</html>
