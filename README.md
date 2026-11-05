@@ -41,6 +41,7 @@ The application provides an administrator dashboard for uploading PDF documents,
 
 
 
+
 ## Project Demonstration
 
 Explore the **PDF Management System** through our official interactive project demonstration.
@@ -92,8 +93,9 @@ The demonstration showcases the application's interface, PDF processing capabili
 
 The dedicated demonstration page is hosted using **GitHub Pages**, allowing visitors to watch the embedded YouTube video without requiring deployment of the FastAPI backend or MongoDB database.
 
-**Live Demonstration:**  
-https://eric428-a.github.io/PDF-Management-System/demo.html
+**Live Demonstration:**
+
+[https://eric428-a.github.io/PDF-Management-System/demo.html](https://eric428-a.github.io/PDF-Management-System/demo.html)
 
 ---
 
