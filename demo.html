@@ -1,0 +1,559 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Demonstration | PDF Management System</title>
+
+    <meta name="description"
+          content="Watch the official PDF Management System demonstration. Explore PDF uploading, inspection, intelligent compression, and document management.">
+
+    <meta name="theme-color" content="#24143d">
+
+    <link rel="icon" type="image/svg+xml" href="frontend/favicon.svg">
+
+    <style>
+        :root {
+            --background: #170e29;
+            --panel: #24143d;
+            --panel-light: #30204b;
+            --green: #24c982;
+            --white: #ffffff;
+            --muted: #b9afc9;
+            --border: rgba(255,255,255,0.09);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--background);
+            color: var(--white);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+
+        .header {
+            width: 100%;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+            background: rgba(23,14,41,0.95);
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--green);
+        }
+
+        .back-link {
+            color: var(--white);
+            text-decoration: none;
+            border: 1px solid var(--green);
+            padding: 9px 18px;
+            border-radius: 7px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .back-link:hover {
+            background: var(--green);
+            color: var(--background);
+        }
+
+        /* HERO SECTION */
+
+        .main {
+            width: 88%;
+            max-width: 1150px;
+            margin: 75px auto;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 8px 17px;
+            border-radius: 30px;
+            background: rgba(36,201,130,0.12);
+            color: var(--green);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(30px, 5vw, 49px);
+            line-height: 1.2;
+            margin-bottom: 18px;
+            letter-spacing: -1px;
+        }
+
+        h1 span {
+            color: var(--green);
+        }
+
+        .description {
+            max-width: 750px;
+            margin: auto;
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        /* VIDEO SECTION */
+
+        .video-section {
+            background: var(--panel);
+            padding: 15px;
+            border: 1px solid rgba(36,201,130,0.2);
+            border-radius: 15px;
+            box-shadow: 0 20px 65px rgba(0,0,0,0.3);
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #000;
+            overflow: hidden;
+            border-radius: 9px;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            inset: 0;
+            border: none;
+        }
+
+        .video-information {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding: 19px 8px 8px;
+        }
+
+        .video-information h2 {
+            font-size: 16px;
+        }
+
+        .video-information p {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .youtube-link {
+            text-decoration: none;
+            color: var(--green);
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .youtube-link:hover {
+            text-decoration: underline;
+        }
+
+        /* FEATURES */
+
+        .section-heading {
+            text-align: center;
+            margin: 65px 0 28px;
+        }
+
+        .section-heading h2 {
+            font-size: 27px;
+            margin-bottom: 10px;
+        }
+
+        .section-heading h2 span {
+            color: var(--green);
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 17px;
+        }
+
+        .feature {
+            background: var(--panel);
+            padding: 23px 19px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            border-color: var(--green);
+        }
+
+        .feature-number {
+            color: var(--green);
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 13px;
+        }
+
+        .feature h3 {
+            font-size: 15px;
+            margin-bottom: 9px;
+        }
+
+        .feature p {
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        /* TECHNOLOGY SECTION */
+
+        .technology {
+            background: var(--panel);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin-top: 55px;
+            text-align: center;
+        }
+
+        .technology h2 {
+            font-size: 21px;
+            margin-bottom: 20px;
+        }
+
+        .technology h2 span {
+            color: var(--green);
+        }
+
+        .tech-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .tech-item {
+            background: var(--panel-light);
+            padding: 9px 17px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            border: 1px solid var(--border);
+        }
+
+        /* FOOTER */
+
+        .footer {
+            margin-top: 75px;
+            padding: 30px 15px;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .footer strong {
+            color: var(--green);
+        }
+
+        /* RESPONSIVE DESIGN */
+
+        @media (max-width: 850px) {
+            .features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .main {
+                width: 92%;
+                margin: 55px auto;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .header {
+                padding: 17px 5%;
+            }
+
+            .logo {
+                font-size: 15px;
+            }
+
+            .back-link {
+                padding: 8px 11px;
+                font-size: 11px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .video-section {
+                padding: 7px;
+            }
+
+            .video-information {
+                padding: 15px 7px 7px;
+            }
+
+            .technology {
+                padding: 23px 14px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo">
+            PDF <span>Management System</span>
+        </div>
+
+        <a href="index.html" class="back-link">
+            ← Back to Project
+        </a>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main">
+
+        <!-- HERO -->
+
+        <section class="hero">
+
+            <div class="tag">
+                OFFICIAL PROJECT DEMONSTRATION
+            </div>
+
+            <h1>
+                See the System <span>in Action</span>
+            </h1>
+
+            <p class="description">
+                Discover how the PDF Management System simplifies
+                document uploading, inspection, intelligent compression,
+                downloading, and processing history management.
+
+                Watch the complete demonstration below to explore
+                the application's features and functionality.
+            </p>
+
+        </section>
+
+
+        <!-- VIDEO PLAYER -->
+
+        <section class="video-section">
+
+            <div class="video-wrapper">
+
+                <iframe
+                    src="https://www.youtube-nocookie.com/embed/AFHfNY2iu2I"
+                    title="PDF Management System - Official Demonstration"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+            <div class="video-information">
+
+                <div>
+                    <h2>PDF Management System</h2>
+
+                    <p>
+                        Official project video demonstration
+                    </p>
+                </div>
+
+                <a
+                    href="https://www.youtube.com/watch?v=AFHfNY2iu2I"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="youtube-link">
+
+                    Watch on YouTube ↗
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- FEATURES -->
+
+        <section>
+
+            <div class="section-heading">
+
+                <h2>
+                    What the System <span>Offers</span>
+                </h2>
+
+                <p>
+                    Explore the main functionalities demonstrated in the video.
+                </p>
+
+            </div>
+
+            <div class="features">
+
+                <div class="feature">
+
+                    <div class="feature-number">01 / AUTHENTICATION</div>
+
+                    <h3>Administrator Login</h3>
+
+                    <p>
+                        Secure administrator authentication
+                        and protected dashboard access.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-number">02 / INSPECTION</div>
+
+                    <h3>PDF Inspection</h3>
+
+                    <p>
+                        Upload PDF documents and examine
+                        their available document properties.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-number">03 / COMPRESSION</div>
+
+                    <h3>Intelligent Compression</h3>
+
+                    <p>
+                        Reduce PDF file sizes while considering
+                        readability and document quality.
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-number">04 / MANAGEMENT</div>
+
+                    <h3>Document Management</h3>
+
+                    <p>
+                        Download original and compressed
+                        files and review processing history.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TECHNOLOGY STACK -->
+
+        <section class="technology">
+
+            <h2>
+                Built With <span>Modern Technologies</span>
+            </h2>
+
+            <div class="tech-list">
+
+                <div class="tech-item">Python</div>
+
+                <div class="tech-item">FastAPI</div>
+
+                <div class="tech-item">HTML5</div>
+
+                <div class="tech-item">CSS3</div>
+
+                <div class="tech-item">JavaScript</div>
+
+                <div class="tech-item">MongoDB Atlas</div>
+
+                <div class="tech-item">PyMuPDF</div>
+
+                <div class="tech-item">Pillow</div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <p>
+            <strong>PDF Management System</strong>
+        </p>
+
+        <p>
+            Built with Python, FastAPI, JavaScript, and MongoDB Atlas.
+        </p>
+
+        <p style="margin-top: 12px;">
+            Project Demonstration
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
