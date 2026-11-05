@@ -46,8 +46,8 @@ Watch the PDF Management System in action.
 <!-- Replace YOUR_YOUTUBE_VIDEO_ID with the ID of your actual YouTube demonstration video. -->
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=YOUR_YOUTUBE_VIDEO_ID">
-    <img src="https://img.youtube.com/vi/YOUR_YOUTUBE_VIDEO_ID/maxresdefault.jpg"
+  <a href="[![https://www.youtube.com/watch?v=YOUR_YOUTUBE_VIDEO_ID](http://youtube.com/watch?v=AFHfNY2iu2I)]">
+    <img src="(https://www.youtube.com/watch?v=AFHfNY2iu2I)"
          alt="Watch PDF Management System demonstration"
          width="800">
   </a>
