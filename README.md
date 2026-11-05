@@ -68,7 +68,7 @@ Discover how the platform simplifies PDF uploading, document inspection, intelli
 </p>
 
 <p align="center">
-  <a href="https://eric428-a.github.io/PDF-Management-System/demo.html">
+  <a href="https://eric428-a.github.io/PDF-Management-System/demo.html#demonstration">
     Visit the Live Demonstration Page
   </a>
 </p>
