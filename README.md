@@ -42,17 +42,18 @@ The application provides an administrator dashboard for uploading PDF documents,
 
 
 
+
 ## Project Demonstration
 
 Explore the **PDF Management System** through our official interactive project demonstration.
 
-The demonstration showcases the application's interface, PDF processing capabilities, intelligent compression engine, and document management features.
+Discover how the platform simplifies PDF uploading, document inspection, intelligent compression, downloading, and processing history management.
 
 <p align="center">
   <a href="https://eric428-a.github.io/PDF-Management-System/demo.html">
     <img
-      src="https://img.youtube.com/vi/AFHfNY2iu2I/0.jpg"
-      alt="PDF Management System - Official Video Demonstration"
+      src="docs/images/dashboard-overview.png"
+      alt="PDF Management System - Interactive Project Demonstration"
       width="850"
     />
   </a>
@@ -61,18 +62,14 @@ The demonstration showcases the application's interface, PDF processing capabili
 <p align="center">
   <strong>
     <a href="https://eric428-a.github.io/PDF-Management-System/demo.html">
-      ▶ WATCH THE FULL PROJECT DEMONSTRATION
+      ▶ EXPLORE THE INTERACTIVE PROJECT DEMONSTRATION
     </a>
   </strong>
 </p>
 
 <p align="center">
   <a href="https://eric428-a.github.io/PDF-Management-System/demo.html">
-    View Interactive Demonstration Page
-  </a>
-  |
-  <a href="https://www.youtube.com/watch?v=AFHfNY2iu2I">
-    Watch Directly on YouTube
+    Visit the Live Demonstration Page
   </a>
 </p>
 
@@ -91,11 +88,13 @@ The demonstration showcases the application's interface, PDF processing capabili
 
 ### Interactive Demonstration
 
-The dedicated demonstration page is hosted using **GitHub Pages**, allowing visitors to watch the embedded YouTube video without requiring deployment of the FastAPI backend or MongoDB database.
+The project includes a dedicated demonstration website hosted using **GitHub Pages**.
+
+Visitors can explore the presentation and interact with the embedded project demonstration through the dedicated webpage without requiring deployment of the FastAPI backend or MongoDB database.
 
 **Live Demonstration:**
 
-[https://eric428-a.github.io/PDF-Management-System/demo.html](https://eric428-a.github.io/PDF-Management-System/demo.html)
+[Open the PDF Management System Demonstration](https://eric428-a.github.io/PDF-Management-System/demo.html)
 
 ---
 
